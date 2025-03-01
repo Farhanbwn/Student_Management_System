@@ -25,10 +25,10 @@ public class Student {
 		  }
       }
 
-        String studentData = "Name: " + Name + "\nRoll No: " + Roll_No + "\nMarks of Subject 1: "+ Marks1 + "\nMarks of Subject 2: "+ Marks2 + "\nMarks of Subject 3: " + Marks3;
+        String studentData = ("Name: " + Name + "\nRoll No: " + Roll_No + "\nMarks of Subject 1: "+ Marks1 + "\nMarks of Subject 2: "+ Marks2 + "\nMarks of Subject 3: " + Marks3);
         st.add(studentData);
 
-        System.out.println("----------Student Added Successfully----------");
+        System.out.println("\n\n----------Student Added Successfully----------");
     }
 
 
@@ -39,11 +39,11 @@ public class Student {
 		    for (int i = 0; i < st.size(); i++) {
 		        if (st.get(i).contains("Roll No: " + Delete)) {
 		            st.remove(i);
-		            System.out.println("Student with Roll No " + Delete + " deleted successfully.");
+		            System.out.println("Roll No " + Delete + " deleted successfully.");
 		            return;
 		        }
 		    }
-		    System.out.println("\nStudent with Roll No " + Delete + " not found.");
+		    System.out.println("\n\nRoll No " + Delete + " not found.");
 		}
 
 
@@ -57,17 +57,17 @@ public class Student {
 	                String newName = sc.nextLine();
 	                String updatedStudentData = "Name: " + newName + "\nRoll No: " + Update;
 	                st.set(i, updatedStudentData);
-	                System.out.println("Student with Roll No " + Update + " updated successfully.");
+	                System.out.println("\n\nRoll No " + Update + " updated successfully.");
 	                return;
 	            }
 	        }
-	        System.out.println("Student with Roll No " + Update + " not found.");
+	        System.out.println("\n\nRoll No " + Update + " not found.");
     }
 
 
     public void display() {
         if (st.isEmpty()) {
-            System.out.println("No Student to Display.....");
+            System.out.println("\n\n.....No Student to Display.....\n\n");
         } else {
             for (String s : st) {
                 System.out.println("---------------------------");
@@ -103,11 +103,11 @@ public class Student {
 					students.Update();
                     break;
                 case 5:
-				    System.out.println("----------Exiting from the Program----------");
+				    System.out.println("\n\n----------Exiting from the Program----------\n\n");
 				    students.sc.close();
                     return;
                 default:
-                    System.out.println("----------Invalid Choice---------- \n---------Please Try Again---------");
+                    System.out.println("\n----------Invalid Choice---------- \n---------Please Try Again---------");
             }
         }
     }
