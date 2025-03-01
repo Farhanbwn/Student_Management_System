@@ -100,11 +100,11 @@ public class Student {
                     students.Delete();
                     break;
                 case 4:
-		    students.Update();
+                    students.Update();
                     break;
                 case 5:
-		    System.out.println("\n\n----------Exiting from the Program----------\n\n");
-		    students.sc.close();
+                    System.out.println("\n\n----------Exiting from the Program----------\n\n");
+                    students.sc.close();
                     return;
                 default:
                     System.out.println("\n----------Invalid Choice---------- \n---------Please Try Again---------");
